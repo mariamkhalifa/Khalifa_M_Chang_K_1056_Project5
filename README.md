@@ -1,6 +1,6 @@
 <p align="center"><img src="images/logo.svg" width="20%">
 
-#Responsive Page for the TRAA Site
+# Responsive Page for the TRAA Site
 
 The responsive projects page for the Thames River Anglers Association. The old version can be found [here](anglers.org).
 <hr>
