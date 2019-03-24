@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/*CSS Doc*/
+
+.hidden
+{
+	display: none;
+}
+
+#container
+{
+	width: 960px;
+	margin: 0 auto;
+}
+
