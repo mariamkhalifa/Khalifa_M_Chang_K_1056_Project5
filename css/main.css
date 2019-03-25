@@ -37,7 +37,7 @@ img {
 	max-width: 960px;
 	min-width: 320px;
 	/*set top margin to avoid content overlay*/
-	margin-top: 150px;
+	/*margin-top: 150px;*/
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -102,7 +102,7 @@ img {
 }
 
 .btnDonate {
-	margin-right: 40px;
+	margin-bottom: 20px;
 }
 
 .subBut {
@@ -111,6 +111,7 @@ img {
 	color: #fff;
 	height: 47px;
 	width: 47px;
+	border-radius: 0px 20px 20px 0px ;
 }
 
 #actionBtns {
@@ -140,8 +141,7 @@ img {
 	background-image : url(../images/arrow_down.svg);
 	background-repeat: no-repeat;
 	position: absolute;
-	left: 460px;
-	top: 350px;
+	top: 80%;
 }
 
 /*Swing Button*/
@@ -209,208 +209,77 @@ img {
 
 /* === HEADER === */
 
-#mainHeader {
-	position: fixed;
-	top: 0px;
-	/*puts header above hero*/
-	z-index: 2;
-	transition: top 0.3s;
-}
-
-#mainHeaderCon {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	width: 920px;
-	padding: 20px;
-	background-color: #fff;
-}
-
 #headerLogo {
-	width: 122px;
-	margin-right: 20px;
+	width: 64px;
 }
 
 
 /* Social Media */
 
-#headerSocialMedia ul {
-	display: flex;
-	flex-direction: row;
-/*	background-color: tomato;*/
-}
-
-#headerSocialMedia ul li{
-	width: 24px;
-	height: 24px;
-	margin-left: 20px;
+#headerSocialMedia {
+	display: none;
 }
 
 
 /* Main Navigation */
 
 #mainNav {
-	display: flex;
-	margin-left: auto;
-	margin-right: 20px;
-}
-
-#mainNav ul {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-/*	background-color: gold;*/
-}
-
-#mainNav ul li {
-	display: inline;
-}
-
-#mainNav a {
-	text-decoration: none;
-	font-size: 24px;
-	font-family: Abolition, sans-serif;
-	color: #136a81;
-	padding: 20px 30px;
-	border-radius: 40px;
-/*	background-color: skyblue;*/
-}
-
-#mainNav a:hover {
-	transition: all .5s ease;
-	background-color: #94a401;
-	color: #fff;
-	padding: 20px 30px;
-	border-radius: 40px;
-}
-
-#navJoin {
-	color: #fff !important;
-	background-color: #94a401 !important;
-	margin-left: 20px;
-}
-
-#navJoin:hover {
-	color: #fff !important;
-	background-color: #136a81 !important;
-}
-
-/* sub nav beginning*/
-
-#dropdown {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	transition: top 0.3s;
-/*	background-color: tomato;*/
-}
-
-.subNav {
-	margin-top: 20px;
-}
-
-.subNav ul li a{
-	font-family: Abolition, sans-serif;
-	font-size: 18px;
-	color: #fff;
-	background-color: #94a401;
-	padding: 20px 50px;
-}
-
-#whoNav {
 	display: none;
-}
-
-#whoNav ul{
-	margin-left: 420px;
-}
-
-#whoNav.slideToggle {
-/*	transition: all .3s ease;*/
-	display: block;
-}
-
-#workNav {
-	display: none;
-}
-
-#workNav ul {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin-left: 540px;
-	background-color: #94a401;
-}
-
-#workNav ul li {
-	margin-bottom: 20px;
-}
-
-#workNav.slideToggle {
-/*	transition: all .3s ease;*/
-	display: block;
 }
 
 /* === HERO CLASS === */
 
 .hero {
-	width: 960px;
+	max-width: 960px;
 	height: 408px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(152, 226, 244, 0.5)), url(../images/projects_hero.jpg);
 }
 
 .heroImage {
-	height: 408px;
 	position: absolute;
 	top: 0;
 	left: 0;
 }
 
-.heroOverlay {
+/*.heroOverlay {
 	width: 960px;
 	height: 408px;
 	position: absolute;
 	background-color: rgba(152, 226, 244, 0.29);
-}
-
+}*/
 
 .hero h2 {
 	font-size: 48px;
 	color: #fff;
-	text-align: center;
 	position: absolute;
-	top: 180px;
-	left: 370px;
 }
 
 /* === PROJECTS PAGE === */
 
-#Projects-h2 {
-	position: absolute;
-	left: 430px;
-}
-
 #donateBanner {
 	display: flex;
+	flex-direction: column;
 	justify-content: flex-start;
 	background-color: #136a81;
 	padding: 40px;
+	flex-wrap: wrap;
+	text-align: center;
+	justify-content: center;
 }
 
 #donateBanner p {
 	font-size: 24px;
 /*	text-transform: uppercase;*/
 	color: #fff;
-	margin-right: auto;
-	vertical-align: middle;
+	align-self: center;
 	margin-top: auto;
-	margin-bottom: auto;
+	margin-bottom: 35px;
+	text-align: center;
 }
 
 #projectArea {
@@ -422,6 +291,7 @@ img {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .project {
@@ -431,6 +301,7 @@ img {
 	align-items: center;
 	width: 480px;
 	height: 400px;
+	flex: 1 1 300px;
 }
 
 .project:hover {
@@ -445,19 +316,19 @@ img {
 }
 
 #projectHatchery {
-	background-image: url(../images/projects_hatchery.jpg);
+	background: url(../images/projects_hatchery.jpg) no-repeat center;
 }
 
 #projectSalmonid {
-	background-image: url(../images/projects_salmonid_monitoring.jpg);
+	background: url(../images/projects_salmonid_monitoring.jpg) no-repeat center;
 }
 
 #projectKomoka {
-	background-image: url(../images/projects_komoka_creek.jpg);
+	background: url(../images/projects_komoka_creek.jpg) no-repeat center;
 }
 
 #projectBrownTrout {
-	background-image: url(../images/projects_brown_trout_hatchery.jpg);
+	background: url(../images/projects_brown_trout_hatchery.jpg) no-repeat center;
 }
 
 #projectBrownTrout button{
@@ -465,7 +336,7 @@ img {
 }
 
 #projectArchive {
-	width: 960px;
+	box-sizing: border-box;
 	height: 200px;
 	background-color: #136a81;
 	display: flex;
@@ -473,6 +344,7 @@ img {
 	justify-content: flex-end;
 	align-items: center;
 	position: relative;
+	padding-bottom: 10px;
 }
 
 #projectArchive h2 {
@@ -544,6 +416,7 @@ img {
 
 #name {
 	padding-left: 5px;
+	border-radius: 	20px 0px 0px 20px;
 }
 
 #mainFooterSocialNav ul {
@@ -603,9 +476,20 @@ img {
  /* END MAIN FOOTER */
 
 
+@media screen and (min-width: 480px) {
+	.projectRow {
+		flex-wrap: nowrap;
+	}
+}
+
+
 /* === DESKTOP VERSION === */
 
 @media screen and (min-width: 903px) {
+
+	#container {
+		margin-top: 150px;
+	}
 
 	/* === BUTTONS === */
 
@@ -634,6 +518,248 @@ img {
 	#actionBtns {
 		display: none;
 	}
+
+	.btnDonate {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	}
+
+	/* === HEADER === */
+
+	#mainHeader {
+		position: fixed;
+		top: 0px;
+		/*puts header above hero*/
+		z-index: 2;
+		transition: top 0.3s;
+	}
+
+	#mainHeaderCon {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 960px;
+		padding: 20px;
+		background-color: #fff;
+		box-sizing: border-box;
+	}
+
+	#headerLogo {
+		width: 122px;
+		margin-right: 20px;
+	}
+
+	/* Social Media */
+
+	#headerSocialMedia {
+		display: block;
+	}
+
+	#headerSocialMedia ul {
+		display: flex;
+		flex-direction: row;
+	/*	background-color: tomato;*/
+	}
+
+	#headerSocialMedia ul li{
+		width: 24px;
+		height: 24px;
+		margin-left: 20px;
+	}
+
+	/* Main Navigation */
+
+	#mainNav {
+		display: flex;
+		margin-left: auto;
+		margin-right: 20px;
+	}
+
+	#mainNav ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	#mainNav ul li {
+		display: inline;
+	}
+
+	#mainNav a {
+		text-decoration: none;
+		font-size: 24px;
+		font-family: Abolition, sans-serif;
+		color: #136a81;
+		padding: 20px 30px;
+		border-radius: 40px;
+	/*	background-color: skyblue;*/
+	}
+
+	#mainNav a:hover {
+		transition: all .5s ease;
+		color: #94a401;
+	/*	padding: 20px 30px;*/
+		border-radius: 40px;
+	}
+
+	#navJoin {
+		color: #fff !important;
+		background-color: #94a401 !important;
+		margin-left: 20px;
+	}
+
+	#navJoin:hover {
+		color: #fff !important;
+		background-color: #136a81 !important;
+	}
+
+	/* sub nav beginning*/
+
+	#dropdown {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		transition: top 0.3s;
+	/*	background-color: tomato;*/
+	}
+
+	.subNav {
+		margin-top: 20px;
+	}
+
+	.subNav ul li a{
+		font-family: Abolition, sans-serif;
+		font-size: 18px;
+		color: #fff;
+		background-color: #94a401;
+		padding: 20px 50px;
+	}
+
+	#whoNav {
+		display: none;
+	}
+
+	#whoNav ul{
+		margin-left: 420px;
+	}
+
+	#whoNav.slideToggle {
+	/*	transition: all .3s ease;*/
+		display: block;
+	}
+
+	#workNav {
+		display: none;
+	}
+
+	#workNav ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-left: 540px;
+		background-color: #94a401;
+	}
+
+	#workNav ul li {
+		margin-bottom: 20px;
+	}
+
+	#workNav.slideToggle {
+	/*	transition: all .3s ease;*/
+		display: block;
+	}
+
+	/* === PROJECTS PAGE === */
+
+	#donateBanner {
+		flex-direction: row;
+		justify-content: flex-start;
+		background-color: #136a81;
+		padding: 40px;
+	}
+
+	#donateBanner p {
+		font-size: 24px;
+	/*	text-transform: uppercase;*/
+		color: #fff;
+		align-self: center;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-right: auto;
+	}
+
+	#projectArea {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.projectRow {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.project {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 480px;
+		height: 400px;
+	}
+
+	.project:hover {
+		/*put an overlay on top to only target background image*/
+		opacity: 0.5;
+	  	transition: .7s ease;
+	}
+
+	.project h3 {
+		color: #fff;
+		text-align: center;
+	}
+
+	#projectHatchery {
+		background-image: url(../images/projects_hatchery.jpg);
+	}
+
+	#projectSalmonid {
+		background-image: url(../images/projects_salmonid_monitoring.jpg);
+	}
+
+	#projectKomoka {
+		background-image: url(../images/projects_komoka_creek.jpg);
+	}
+
+	#projectBrownTrout {
+		background-image: url(../images/projects_brown_trout_hatchery.jpg);
+	}
+
+	#projectBrownTrout button{
+		margin-top: 20px;
+	}
+
+	#projectArchive {
+		box-sizing: border-box;
+		height: 200px;
+		background-color: #136a81;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		position: relative;
+		padding-bottom: 10px;
+	}
+
+	#projectArchive h2 {
+		font-size: 48px;
+		color: #fff;
+		margin-bottom: 40px;
+	}
+
 
 	/* === MAIN FOOTER === */
 
