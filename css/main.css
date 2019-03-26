@@ -37,7 +37,7 @@ img {
 	max-width: 960px;
 	min-width: 320px;
 	/*set top margin to avoid content overlay*/
-	/*margin-top: 150px;*/
+	margin-top: 81px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -122,17 +122,10 @@ img {
 	margin: 20px 0px;
 }
 
-.btnLarge:hover, .btnSmall:hover, #btnJoin:hover, .btnTopBg:hover, .subBut:hover{
-	transition: .3s ease;
+.btnLarge:active, .btnSmall:active, #btnJoin:active, .btnTopBg:active, .subBut:active{
+	transition: ease;
 	box-shadow: 0px 3px 4px 0px rgba(31, 29, 30, 0.35);
 	cursor: pointer;
-}
-
-.btnLarge:active, .btnSmall:active {
-
-/*make it cool*/
-/*	box-shadow: inset 0 0 0 3px #999*/
-
 }
 
 .downArrow {
@@ -209,10 +202,31 @@ img {
 
 /* === HEADER === */
 
+#mainHeaderCon {
+	/* remember: fixed takes items out of normal flow*/
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background-color: #fff;
+	box-sizing: border-box;
+	/*puts header above hero*/
+	z-index: 2;
+	transition: top 0.3s;
+	border-bottom: 1px solid #ccc;
+
+/*	flex: 1 1 auto;*/
+	/* makes nav stretch and grow like a flex*/
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
 #headerLogo {
 	width: 64px;
 }
-
 
 /* Social Media */
 
@@ -223,9 +237,63 @@ img {
 
 /* Main Navigation */
 
+.hamburger {
+	font-size: 40px;
+	color: #136a81;
+	transition: all .2s ease-in-out;
+}
+
+.hamburger.expanded {
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
 #mainNav {
 	display: none;
 }
+
+#mainNav.slideToggle {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	position: absolute;
+	height: 100vh;
+	width: 50%;
+	top: 81px;
+	padding: 50px;
+	right: 0;
+	background-color: #fff;
+}
+
+#mainNav.slideToggle ul li {
+	margin-bottom: 55px;
+}
+
+#mainNav.slideToggle a {
+	text-decoration: none;
+	font-size: 27px;
+	font-family: Abolition, sans-serif;
+	color: #136a81;
+	transition: all ease;
+}
+
+#mainNav.slideToggle a:active {
+	color: #94a401;
+}
+
+.navOverlay {
+	background-color: #136a81;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -70%;
+	right: 0;
+	z-index: -1;
+	opacity: 0.5;
+
+}
+
 
 /* === HERO CLASS === */
 
@@ -237,7 +305,7 @@ img {
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(152, 226, 244, 0.5)), url(../images/projects_hero.jpg);
+	background-image: linear-gradient(rgba(152, 226, 244, 0.2), rgba(152, 226, 244, 0.5)), url(../images/projects_hero.jpg);
 }
 
 .heroImage {
@@ -302,12 +370,6 @@ img {
 	width: 480px;
 	height: 400px;
 	flex: 1 1 300px;
-}
-
-.project:hover {
-	/*put an overlay on top to only target background image*/
-	opacity: 0.5;
-  	transition: .7s ease;
 }
 
 .project h3 {
@@ -485,7 +547,7 @@ img {
 
 /* === DESKTOP VERSION === */
 
-@media screen and (min-width: 903px) {
+@media screen and (min-width: 938px){
 
 	#container {
 		margin-top: 150px;
@@ -528,11 +590,10 @@ img {
 	/* === HEADER === */
 
 	#mainHeader {
-		position: fixed;
-		top: 0px;
 		/*puts header above hero*/
 		z-index: 2;
 		transition: top 0.3s;
+		width: 960px;
 	}
 
 	#mainHeaderCon {
@@ -540,10 +601,14 @@ img {
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		width: 960px;
 		padding: 20px;
 		background-color: #fff;
 		box-sizing: border-box;
+		width: 960px;
+
+		/*resets coded values for mobile*/
+		right: auto;
+		left: auto;
 	}
 
 	#headerLogo {
@@ -571,6 +636,14 @@ img {
 
 	/* Main Navigation */
 
+	.navOverlay {
+		display: none;
+	}
+
+	.hamburger {
+		display: none;
+	}
+
 	#mainNav {
 		display: flex;
 		margin-left: auto;
@@ -587,21 +660,26 @@ img {
 		display: inline;
 	}
 
+	#mainNav ul li:first-child {
+		order: 3;
+		color: #136a81;
+	}
+
 	#mainNav a {
 		text-decoration: none;
-		font-size: 24px;
 		font-family: Abolition, sans-serif;
 		color: #136a81;
+		transition: all .5s ease;
+		font-size: 24px;
 		padding: 20px 30px;
 		border-radius: 40px;
 	/*	background-color: skyblue;*/
 	}
 
 	#mainNav a:hover {
-		transition: all .5s ease;
-		color: #94a401;
 	/*	padding: 20px 30px;*/
 		border-radius: 40px;
+		color: #94a401;
 	}
 
 	#navJoin {
