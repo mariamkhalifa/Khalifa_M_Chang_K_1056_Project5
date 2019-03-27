@@ -1,40 +1,36 @@
 
-(function() {
+(() => {
 
-	var hamburger	= document.querySelector(".hamburger");
-	var mainNav 	= document.querySelector("#mainNav");
-	var navAppear 	= window.pageYOffset;
+	const	hamburger			= document.querySelector('.hamburger'),
+			mainNav 			= document.querySelector('#mainNav'),
+			mainHeaderCon		= document.querySelector('#mainHeaderCon'),
+			mainHeader			= document.querySelector('#mainHeader'), 
+			mediaQuery1 		= window.matchMedia('(min-width: 938px)');
 
 	function hamburgerMenu() {
-		mainNav.classList.toggle("slideToggle");
-		hamburger.classList.toggle("expanded");
+		mainNav.classList.toggle('slideToggle');
+		hamburger.classList.toggle('expanded');
 	}
 
-	// Makes big nav disappear on scroll
-	// make function wait?
+	var scrollTop = 0;
 
-	window.onscroll = function() {
-	var navDisappear = window.pageYOffset;
-	  if (navAppear > navDisappear) {
-	    document.getElementById("mainHeader").style.top = "0";
-	  } else {
-	    document.getElementById("mainHeader").style.top = "-151px";
-	  }
-	  navAppear = navDisappear;
+	window.onscroll = function(){
+		var pageScroll = window.pageYOffset;  
+
+		if (pageScroll > scrollTop && mediaQuery1.matches){
+			mainHeader.style.top = '-100%';
+			mainHeaderCon.style.top = '-100%';
+		}
+		else if (pageScroll === 0 && mediaQuery1.matches) {
+			mainHeader.style.top = '0';
+			mainHeaderCon.style.top = '52px';
+		}
+		else {
+			mainHeaderCon.style.top = '0';
+		}
+	   scrollTop = pageScroll;
 	}
 
-
-	hamburger.addEventListener("click", hamburgerMenu);
+	hamburger.addEventListener('click', hamburgerMenu);
 
 })();
-
-// function scrollFunction() {
-
-// if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-//     document.getElementById("mainHeaderCon").style.padding = "0px";
-//     document.getElementById("headerLogo").style.width = "61px";
-//   } else {
-//   	document.getElementById("mainHeaderCon").style.padding = "20px";
-//     document.getElementById("headerLogo").style.width = "122px";
-//   }
-// }
