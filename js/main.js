@@ -5,7 +5,7 @@
 			mainNav 			= document.querySelector('#mainNav'),
 			mainHeaderCon		= document.querySelector('#mainHeaderCon'),
 			mainHeader			= document.querySelector('#mainHeader'), 
-			mediaQuery1 		= window.matchMedia('(min-width: 938px)');
+			mediaQuery1 		= window.matchMedia('(min-width: 768px)');
 
 	function hamburgerMenu() {
 		mainNav.classList.toggle('slideToggle');
