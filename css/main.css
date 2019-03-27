@@ -584,8 +584,8 @@ img, embed, object, video {
 	}
 	.project {
 		/* resetting 321px media query max-min widths*/
-		max-width: auto;
-		min-width: auto;
+		max-width: inherit;
+		min-width: inherit;
 		flex: 1;
 	}
 }
