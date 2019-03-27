@@ -24,6 +24,10 @@ p {
 	line-height: 18px;
 }
 
+input {
+	font-family: 'Lato', sans-serif;
+}
+
 img, embed, object, video {
 	max-width: 100%;
 }
@@ -376,6 +380,7 @@ img, embed, object, video {
 	max-width: 320px;
 	height: 250px;
 	flex: 1 1 300px;
+	cursor: pointer;
 }
 
 .project h3 {
@@ -482,7 +487,7 @@ img, embed, object, video {
 }
 
 #name {
-	padding-left: 5px;
+	padding-left: 10px;
 	border-radius: 	20px 0px 0px 20px;
 }
 
