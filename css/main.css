@@ -818,6 +818,16 @@ img, embed, object, video {
 		line-height: 20px;
 	}
 
+	/* === MAIN NAV ===*/
+
+	#headerSocialMedia ul li {
+		transition: all .5s ease;
+	}
+
+	#headerSocialMedia ul li:hover {
+		opacity: .5;
+	}
+
 	/* === BUTTONS === */
 
 	.btnCon {
@@ -999,7 +1009,12 @@ img, embed, object, video {
 		/* let icon define height*/
 		width: 40px;
 		margin-right: 20px;
+		transition: all .5s ease;
 	}
+
+	#mainFooterSocialNav ul li:hover {
+		opacity: .5;
+	}	
 
 	/* Contact Blurb */
 
