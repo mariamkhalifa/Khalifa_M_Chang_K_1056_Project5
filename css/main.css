@@ -19,8 +19,9 @@ h3 {
 
 p {
 	font-family: 'Lato', sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	color: #136a81;
+	line-height: 18px;
 }
 
 img, embed, object, video {
@@ -34,7 +35,7 @@ img, embed, object, video {
 #container {
 	display: flex;
 	flex-direction: column;
-	max-width: 960px;
+	max-width: 1200px;
 	min-width: 320px;
 	/*set top margin to avoid content overlay*/
 	margin-top: 81px;
@@ -477,7 +478,6 @@ img, embed, object, video {
 
 .text {
 	height: 47px;
-	width: 240px;
 }
 
 #name {
@@ -547,7 +547,7 @@ img, embed, object, video {
 @media screen and (min-width: 321px) {
 
 	.hero {
-		max-width: 960px;
+		max-width: 1200px;
 		background-image: linear-gradient(rgba(152, 226, 244, 0.2), rgba(152, 226, 244, 0.5)), url(../images/projects_hero.jpg);
 	}
 	
@@ -579,6 +579,7 @@ img, embed, object, video {
 }
 
 @media screen and (min-width: 480px) {
+
 	.projectRow {
 		flex-wrap: nowrap;
 	}
@@ -590,83 +591,19 @@ img, embed, object, video {
 	}
 }
 
-@media screen and (min-width:641px) {
-	.project {
-	max-width: 480px;
-	height: 400px;
-	flex: 1;
+	/* === TABLET VERSION === */
 
-	}
-
-	#projectHatchery {
-		background-image: url(../images/projects_hatchery.jpg);
-	}
-
-	#projectSalmonid {
-		background-image: url(../images/projects_salmonid_monitoring.jpg);
-	}
-
-	#projectKomoka {
-		background-image: url(../images/projects_komoka_creek.jpg);
-	}
-
-	#projectBrownTrout {
-		background-image: url(../images/projects_brown_trout_hatchery.jpg);
-	}
-
-	#projectBrownTrout button{
-		margin-top: 20px;
-	}
-
-}
-
-
-/* === DESKTOP VERSION === */
-
-@media screen and (min-width: 938px){
+@media screen and (min-width: 768px) {
 
 	#container {
-		margin-top: 150px;
+		margin-top: 200px;
 	}
 
-	/* === BUTTONS === */
-
-	.btnCon {
-		display: flex;
-		justify-content: center;
-	}
-
-	.btnSmall {
-	height: 40px;
-	width: 160px;
-	margin: 10px;
-	}
-
-	.btnLarge {
-	height: 60px;
-	width: 150px;
-	}
-
-	.subBut {
-	/* let icon define height*/
-	height: 40px;
-	width: 40px;
-	}
-
-	#actionBtns {
-		display: none;
-	}
-
-	.btnDonate {
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 0px;
-	}
-
-	.btnLarge:hover, .btnSmall:hover, #btnJoin:hover, .btnTopBg:hover, .subBut:hover{
-	transition: all .3s ease;
-	box-shadow: 0px 3px 4px 0px rgba(31, 29, 30, 0.35);
-	cursor: pointer;
+	/* === HERO CLASS === */
+	
+	.hero {
+		height: 510px;
+		background-image: linear-gradient(rgba(152, 226, 244, 0.2), rgba(152, 226, 244, 0.5)), url(../images/projects_hero_large.jpg);
 	}
 
 	/* === HEADER === */
@@ -682,7 +619,7 @@ img, embed, object, video {
 		right: 0;
 		left: 0;
 		margin: 0 auto;
-		max-width: 960px;
+		max-width: 1200px;
 	}
 
 	#mainHeaderCon {
@@ -698,7 +635,7 @@ img, embed, object, video {
 
 		/*resets coded values for mobile*/
 		margin: 0 auto;
-		max-width: 960px;
+		max-width: 1200px;
 		top: 48px;
 	}
 
@@ -725,7 +662,7 @@ img, embed, object, video {
 		right: 0;
 		left: 0;
 		margin: 0 auto;
-		max-width: 960px;
+		max-width: 1200px;
 	}
 
 	#headerSocialMedia ul li{
@@ -863,14 +800,64 @@ img, embed, object, video {
 	#workNav ul li {
 		margin-bottom: 20px;
 	}
+}
 
 
-	/* === HERO CLASS === */
+/* === DESKTOP VERSION === */
 
-	.hero {
-		max-width: 960px;
-		background-image: linear-gradient(rgba(152, 226, 244, 0.2), rgba(152, 226, 244, 0.5)), url(../images/projects_hero.jpg);
+@media screen and (min-width: 938px){
+
+	p {
+		font-size: 16px;
+		line-height: 20px;
 	}
+
+	/* === BUTTONS === */
+
+	.btnCon {
+		display: flex;
+		justify-content: center;
+	}
+
+	.btnSmall {
+	height: 40px;
+	width: 160px;
+	margin: 10px;
+	}
+
+	.btnLarge {
+	height: 60px;
+	width: 150px;
+	}
+
+	.subBut {
+	/* let icon define height*/
+	height: 40px;
+	width: 40px;
+	}
+
+	#actionBtns {
+		display: none;
+	}
+
+
+	#donateBanner a{
+		/* value very close to large button width*/
+		flex: 1 1 145px;
+	}
+
+	.btnDonate {
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-bottom: 0px;
+	}
+
+	.btnLarge:hover, .btnSmall:hover, #btnJoin:hover, .btnTopBg:hover, .subBut:hover{
+	transition: all .3s ease;
+	box-shadow: 0px 3px 4px 0px rgba(31, 29, 30, 0.35);
+	cursor: pointer;
+	}
+
 	/* === PROJECTS PAGE === */
 
 	#donateBanner {
@@ -902,8 +889,8 @@ img, embed, object, video {
 	}
 
 	.project {
-	max-width: 480px;
-	height: 400px;
+	max-width: 600px;
+	height: 500px;
 	flex: 1;
 
 	}
@@ -920,19 +907,19 @@ img, embed, object, video {
 	}
 
 	#projectHatchery {
-		background-image: url(../images/projects_hatchery.jpg);
+		background-image: url(../images/projects_hatchery_large.jpg);
 	}
 
 	#projectSalmonid {
-		background-image: url(../images/projects_salmonid_monitoring.jpg);
+		background-image: url(../images/projects_salmonid_monitoring_large.jpg);
 	}
 
 	#projectKomoka {
-		background-image: url(../images/projects_komoka_creek.jpg);
+		background-image: url(../images/projects_komoka_creek_large.jpg);
 	}
 
 	#projectBrownTrout {
-		background-image: url(../images/projects_brown_trout_hatchery.jpg);
+		background-image: url(../images/projects_brown_trout_hatchery_large.jpg);
 	}
 
 	#projectBrownTrout button{
@@ -976,8 +963,6 @@ img, embed, object, video {
 	}
 
 	#mainFooter p {
-		font-size: 14px;
-		line-height: 16px;
 		margin-bottom: 15px;
 		color: #ccc;
 	}
@@ -987,18 +972,15 @@ img, embed, object, video {
 	#newsSocCon {
 		display: flex;
 		flex-direction: column;
-		max-width: 340px;
+		flex: 1 1 400px;
+		min-width: 292px;
 		text-align: left;
 		border-bottom: none;
-	}
-
-	#newsletter p {
-		line-height: 16px;
+		margin-right: 40px;
 	}
 
 	.text {
 		height: 40px;
-		max-width: 260px;
 	}
 
 	#mainFooterSocialNav ul {
@@ -1017,13 +999,8 @@ img, embed, object, video {
 
 	#mainFooterContact {
 		display: block;
-		max-width: 150px;
-		margin-left: 20px; 
-		margin-right: 20px;
-	}
-
-	#mainFooterContact p {
-		line-height: 16px;
+		flex: 1 1 300px;
+		min-width: 170px;
 	}
 
 	#mainFooterContact a {
@@ -1036,6 +1013,7 @@ img, embed, object, video {
 	#mainFooterNav {
 		border-bottom: none;
 		border-right: 2px solid #ccc;
+		margin-left: 40px;
 		margin-right: 40px;
 		padding-right: 30px;
 		order: 0;
